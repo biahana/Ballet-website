@@ -4,9 +4,9 @@ html, body {
 }
 
 .menu {
-    margin: 0;
-    padding: 0px;
-    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    position: absolute;
+  
 }
 
 .menu .list {
@@ -28,87 +28,106 @@ a:hover {
 
 .menu li {
     list-style: none;
-}
-
+    }
+ 
 a {
     text-decoration: none;
     color: rgba(146, 9, 77);
 }
 
-.part1 {
+.pagesection {
     position: relative;
+    height: 700px;
+   
 }
-.part1 img{
-width: 30%;
+
+.pagesection h2 {
+    margin: 0;
+    font-family: bohemian;
+}
+
+.sectionbackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.4;
 }
 
 #home {
-    width: 100%;
-    background: url(3.jpg);
-    background-repeat: no-repeat;
-    height: 853px;
-    background-size: cover;
-    position: absolute;
-    top: -110px;
-    z-index: -10;
-    opacity: 0.5;
+    background-image: url(3.jpg);
 }
 
-h1 {
-    font-family: bohemian;
-    padding: 150px;
-    font: black;
+#left {
+    width: 50%;
+    display: grid;
     float: left;
+    margin-top: 10%;
+}
+
+h2 {
+    padding: 30px;
+    font-family: bohemian;
 }
 
 p {
-    font-family: monospace;
-}    
-.part2{
-        position: relative;
-        
+    padding: 20px;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 2px;
+   
+}
+
+button {
+    background-color: gray;
+    color:black;
+    border-radius: 5px;
+    width: 100px;
+    margin-left:550px;
+  }
+
+#right {
+    width: 50%;
+    display: grid;
+    float: right;
+    margin-top: 15%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+img {
+    max-width: 400px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+}
+
+#staff {
+    background-image: url(4.jpg);
+}
+
+#programs {
+    background-image: url(2.jpg);
+}
+
+#contact {
+    background-image: url(4.jpg);
+}
+
+footer img {
+    position: fixed;
+    bottom: 0;
+    width: 5%;
+}
+@media (min-width: 300px) {
+    .menu
     }
-    #staff {
-        background-image: url(4.jpg);
-        display: block;
-        height: 800px;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        position: absolute;
-    }
-    .part3{
-        position:relative;
-    }
-    #programs {
-        background-image: url(2.jpg);
-        display: block;
-        height: 1920px;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        position: absolute;
-    }
-    .part4{
-        position:relative;
-    }
-    #contact {
-        background-image: url(4.jpg);
-        display: block;
-        height: 800px;
-        width:100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.5;
-        position: absolute 0,0;
-    }
-    footer img {
-        position: fixed;
-        bottom: 0;
-        width: 5%;
-    }
+
+@media (min-width: 400px) {
+    .pagesection
+  }
