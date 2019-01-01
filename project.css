@@ -6,14 +6,15 @@ html, body {
 .menu {
     width: 100%;
     position: absolute;
-  
 }
 
 .menu .list {
     display: inline-block;
-    padding: 25px;
-    font-size: 20px;
+    padding: 30px;
+    font-size: 30px;
     text-align: center;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 20px;
 }
 
 a:hover {
@@ -28,8 +29,8 @@ a:hover {
 
 .menu li {
     list-style: none;
-    }
- 
+}
+
 a {
     text-decoration: none;
     color: rgba(146, 9, 77);
@@ -38,14 +39,9 @@ a {
 .pagesection {
     position: relative;
     height: 700px;
-   
+    border-bottom: 2px solid rgb(199, 195, 195);
+    padding: 10px;
 }
-
-.pagesection h2 {
-    margin: 0;
-    font-family: bohemian;
-}
-
 .sectionbackground {
     position: absolute;
     top: 0;
@@ -60,44 +56,36 @@ a {
 
 #home {
     background-image: url(3.jpg);
+    background-attachment: fixed;
 }
 
-#left {
-    width: 50%;
+#homeleft {
+    width: 30%;
     display: grid;
     float: left;
     margin-top: 10%;
-}
-
-h2 {
-    padding: 30px;
-    font-family: bohemian;
-}
-
-p {
     padding: 20px;
-    margin: 0;
     text-align: justify;
-    letter-spacing: 2px;
-   
+    letter-spacing: 3px;
+}
+#homeleft p{
+    font-family: 'Kalam', cursive;
+    font-size:18px;
 }
 
-button {
-    background-color: gray;
-    color:black;
-    border-radius: 5px;
-    width: 100px;
-    margin-left:550px;
-  }
+#homeleft h2 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
 
-#right {
+#homeright {
     width: 50%;
     display: grid;
     float: right;
     margin-top: 15%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-}
+    }
 
 img {
     max-width: 400px;
@@ -105,18 +93,107 @@ img {
     width: auto;
     height: auto;
     margin-left: 10px;
+    
 }
 
 #staff {
-    background-image: url(4.jpg);
+    background-image: url(3.jpg);
+    background-attachment: fixed;
+    /* display:grid; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#staffleft {
+    width: 15%;
+    float: left;
+    padding: 10px;
+}
+
+#staffleft img {
+    width: 80%;
+}
+
+#staffright {
+    width: 100%;
+}
+
+#staff h2 {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
+#staffleft h3 {
+    font-family: 'Indie Flower', cursive;
+    padding: 30px;
+    text-align: center;
+}
+
+#staffleft h4 {
+    font-family: 'Indie Flower', cursive;
+    margin-top: 250px;
+    text-align: center;
+}
+
+#staffright p {
+    letter-spacing: 1px;
+     text-align: justify;
+    font-family: 'Kalam', cursive;
+}
+
+#team {
+    padding: 20px;
+    margin: 0;
+    line-height: 2px;
+}
+
+button {
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+    width: 100px;
+    margin-left: 550px;
 }
 
 #programs {
-    background-image: url(2.jpg);
+    background-image: url(3.jpg);
+    background-attachment: fixed;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 120px 1150px;
+    grid-template-rows: 1fr 1fr fr 1fr;
+    grid-gap: 15px;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container p {
+    text-align: justify;
+       margin-top: -7px;
+    padding: 15px;
+    font-family: 'Kalam', cursive;
 }
 
 #contact {
-    background-image: url(4.jpg);
+    background-image: url(3.jpg);
+    background-attachment: fixed;
+}
+
+.section4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 450px;
+    grid-gap: 30px;
+}
+.section4 h3{
+text-align: center;
+padding:10px;
+color:rgb(16, 143, 194);
+font-family: 'Indie Flower', cursive;
 }
 
 footer img {
@@ -124,10 +201,11 @@ footer img {
     bottom: 0;
     width: 5%;
 }
+
 @media (min-width: 300px) {
     .menu
-    }
+}
 
 @media (min-width: 400px) {
     .pagesection
-  }
+}
