@@ -1,0 +1,12 @@
+h2, h3{
+    font-family: 'Indie Flower', cursive;
+}
+h2{
+    color: rgb(16, 143, 194);
+}
+video{
+    justify-content: center;
+    align-items: center;
+    padding:30px;
+    margin:0;
+}

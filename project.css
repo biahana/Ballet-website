@@ -3,21 +3,25 @@ html, body {
     padding: 0;
 }
 
+
 .menu {
     width: 100%;
     position: absolute;
-}
+    z-index: 1;
+    padding:0;
+    text-align: center;
+    }
 
 .menu .list {
     display: inline-block;
-    padding: 30px;
-    font-size: 30px;
+    padding: 20px;
+    font-size: 25px;
     text-align: center;
     font-family: 'Lobster', cursive;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
 }
 
-a:hover {
+.menu a:hover {
     color: black
 }
 
@@ -36,14 +40,10 @@ a {
     color: rgba(146, 9, 77);
 }
 
-.pagesection {
-    position: relative;
-    height: 700px;
-    border-bottom: 2px solid rgb(199, 195, 195);
-    padding: 10px;
-}
-.sectionbackground {
-    position: absolute;
+.sectionbkg {
+    background-image: url(bkg.jpg);
+    background-repeat: no-repeat;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -51,26 +51,24 @@ a {
     background-size: cover;
     background-position: center center;
     z-index: -1;
-    opacity: 0.4;
 }
 
 #home {
-    background-image: url(3.jpg);
-    background-attachment: fixed;
+    display: flex;
+    border-bottom: 2px solid rgb(199, 195, 195);
 }
 
 #homeleft {
-    width: 30%;
-    display: grid;
-    float: left;
+    width: 60%;
     margin-top: 10%;
     padding: 20px;
     text-align: justify;
     letter-spacing: 3px;
 }
-#homeleft p{
+
+#homeleft p {
     font-family: 'Kalam', cursive;
-    font-size:18px;
+    font-size: 18px;
 }
 
 #homeleft h2 {
@@ -79,13 +77,15 @@ a {
 }
 
 #homeright {
-    width: 50%;
-    display: grid;
-    float: right;
+    width: 100%;
     margin-top: 15%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     }
+
+#homeright img {
+    width: 70%;
+    padding: 30px;
+    margin-top: 10px;
+}
 
 img {
     max-width: 400px;
@@ -93,20 +93,15 @@ img {
     width: auto;
     height: auto;
     margin-left: 10px;
-    
 }
 
 #staff {
-    background-image: url(3.jpg);
-    background-attachment: fixed;
-    /* display:grid; */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    border-bottom: 2px solid rgb(199, 195, 195);
 }
 
 #staffleft {
     width: 15%;
-    float: left;
     padding: 10px;
 }
 
@@ -118,7 +113,7 @@ img {
     width: 100%;
 }
 
-#staff h2 {
+#tracy {
     font-family: 'Indie Flower', cursive;
     text-align: center;
 }
@@ -137,7 +132,7 @@ img {
 
 #staffright p {
     letter-spacing: 1px;
-     text-align: justify;
+    text-align: justify;
     font-family: 'Kalam', cursive;
 }
 
@@ -156,44 +151,43 @@ button {
 }
 
 #programs {
-    background-image: url(3.jpg);
-    background-attachment: fixed;
-}
+        border-bottom: 2px solid rgb(199, 195, 195);
+    }
+   #programs div{
+       display:flex;
+         padding: 10px;
+   } 
+   #programs p{
+       text-align: justify;
+       padding:20px;
+   }
 
-.container {
-    display: grid;
-    grid-template-columns: 120px 1150px;
-    grid-template-rows: 1fr 1fr fr 1fr;
-    grid-gap: 15px;
-}
-
-.container img {
-    width: 100%;
-}
-
-.container p {
-    text-align: justify;
-       margin-top: -7px;
-    padding: 15px;
-    font-family: 'Kalam', cursive;
-}
 
 #contact {
-    background-image: url(3.jpg);
-    background-attachment: fixed;
+      display: flex;
+      border-bottom: 2px solid rgb(199, 195, 195);
 }
 
-.section4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 450px;
-    grid-gap: 30px;
+#contact h3 {
+    text-align: center;
+    padding: 10px;
+    color: rgb(16, 143, 194);
+    font-family: 'Indie Flower', cursive;
 }
-.section4 h3{
-text-align: center;
-padding:10px;
-color:rgb(16, 143, 194);
-font-family: 'Indie Flower', cursive;
+
+.contactleft {
+    width: 50%;
+    padding: 10px;
+}
+
+.contactright {
+    width: 50%;
+}
+
+.contactright div {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
 }
 
 footer img {
@@ -203,9 +197,6 @@ footer img {
 }
 
 @media (min-width: 300px) {
-    .menu
-}
-
-@media (min-width: 400px) {
-    .pagesection
+    .background
+     .menu #home #homeleft #homeright #staff #staffleft #staffright #team #programs .programsleft .programsright #contact .contactleft.contactright
 }
