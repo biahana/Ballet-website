@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+    
 }
 
 .sectionbkg {
@@ -11,12 +13,20 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    min-width: 100vw;
     height: 100%;
     background-size: cover;
     background-position: center center;
     overflow: hidden;
     z-index: -1;
+}
+
+
+@media(max-width: 600px){
+    .container{
+        width:10%;
+        overflow: hidden;
+    }
 }
 
 .menu {
@@ -28,6 +38,7 @@ body {
     margin-top: 20px;
 }
 
+
 .menu .list {
     display: block;
     overflow: hidden;
@@ -36,6 +47,11 @@ body {
     font-size: 25px;
     letter-spacing: 10px;
     margin-left: 50px;
+}
+ @media (max-width: 600px){
+    .menu .list{
+    font-size: 16px;
+    }
 }
 
 .menu a:hover {
@@ -57,17 +73,30 @@ a {
     text-decoration: none;
     color: rgba(146, 9, 77);
     display: block;
+    clear: both;
+    overflow: hidden;
+   
 }
 
-#homeleft a button {
+#homeleft a.button {
     color: rgba(146, 9, 77);
     float: right;
     padding: 10px 20px;
     box-sizing: border-box;
     color: black;
     border-radius: 5px;
+    background-color: #888888;
+    padding:10px;
+    width:200px;
+    text-align: center;
 }
-
+@media (max-width: 600px){
+    #homeleft a.button{
+    max-width: 100px;
+     font-size: 8px;
+    
+    }
+}
 /* ================= HOME ================= */
 
 #home {
@@ -82,6 +111,12 @@ a {
      text-align: justify;
     letter-spacing: 3px;
 }
+@media(max-width: 600px){
+    #homeleft{
+     
+     width:100%;
+    }
+}
 
 #about {
     font-family: sans-serif;
@@ -89,6 +124,11 @@ a {
      color: rgba(146, 9, 77);
     font-size: 25px;
     font-weight: bold;
+}
+@media(max-width: 600px){
+    #about{
+        font-size: 16px;
+    }
 }
 
 #homeleft p {
@@ -99,26 +139,53 @@ a {
     background: rgb(248, 231, 231);
     opacity: 0.8;
    }
-
+   @media(max-width: 600px){
+    #homeleft p{
+        font-size: 10px;
+    }
+}
 #classical {
     text-align: center;
     font-family: 'Indie Flower', cursive;
     margin-top: 0;
 }
+@media(max-width: 600px){
+    #classical{
+        font-size: 16px;
+    }
+}
 
 #homeright {
     width: 30%;
+}
+@media(max-width: 600px){
+    #homeright{
+    
+     width:100%;
+    }
 }
 
 #homeright img {
     width: 100%;
    }
+   @media(max-width: 600px){
+    #homeright img{
+    margin:0 auto;
+     width:70%;
+    }
+}  
 
 .container {
     display: flex;
     min-height: 100vh;
     margin: 0 auto;
     width: 1000px;
+}
+
+@media(max-width: 600px){
+   #home .container{
+        display:block;
+    }
 }
 
 /* ================= STAFF ================= */
@@ -130,17 +197,31 @@ a {
 }
 
 #staffleft {
-    width: 20%;
+    max-width: 20%;
     padding: 10px;
     margin-right: 5%;
+}
+
+@media(max-width: 600px){
+    #staffleft{
+        max-width: 5%;
+    }
+
 }
 
 #staffleft img {
     width: 100%;
 }
 
+
 #staffright {
     width: 100%;
+}
+@media(max-width: 600px){
+    #staffright{
+        max-width: 20%;
+    }
+
 }
 
 #staffright p.tracy {
@@ -153,6 +234,12 @@ a {
     font-weight: bold;
     margin: 0;
 }
+@media(max-width: 600px){
+    #tracy{
+        font-size: 16px;
+    }
+
+}
 
 #staff h2 {
     text-align: center;
@@ -161,13 +248,22 @@ a {
     font-size: 25px;
     font-weight: bold;
 }
-
+@media(max-width: 600px){
+    #staff h2{
+        font-size: 16px;
+    }
+}
 #staffleft h3 {
     font-family: 'Indie Flower', cursive;
     padding: 75px 0;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+}
+@media(max-width: 600px){
+    #staff h3{
+        font-size: 16px;
+    }
 }
 
 #staffleft h4 {
@@ -176,6 +272,11 @@ a {
     font-size: 20px;
     font-weight: bold;
 }
+@media(max-width: 600px){
+    #staff h4{
+        font-size: 16px;
+    }
+}
 
 #staffright p {
     letter-spacing: 2px;
@@ -183,13 +284,22 @@ a {
     font-family: sans-serif;
     font-size: 14px;
 }
+@media(max-width: 600px){
+    #staffright p{
+        font-size: 10px;
+    }
+}
 
 #team {
     padding: 8px;
     margin: 0;
     line-height: 2px;
 }
-
+@media(max-width: 600px){
+    #team{
+        line-height: 10px;
+    }
+}
 /* ================= PROGRAMS ================= */
 
 #programs h2 {
@@ -200,6 +310,12 @@ a {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 0;
+}
+@media(max-width: 600px){
+    #programs h2{
+        padding: 5px;
+        font-size: 16px;
+    }
 }
 
 #programs .container {
@@ -219,22 +335,44 @@ a {
     width: 100%;
     margin: 0;
 }
+@media(max-width: 600px){
+    #box p{
+        font-size: 10px;
+        width:20%;
+    }
+}
 
 #box p strong {
     display: block;
     margin-bottom: 10px;
     font-size: 20px;
 }
+@media(max-width: 600px){
+    #box p strong{
+        font-size: 10px;
+    }
+}
 
 #box .img {
     width: 13%;
     margin-right: 5%;
+}
+@media(max-width: 600px){
+    #box .img{
+        margin-right: 1%;
+    }
 }
 
 #box .img img {
     width: 100%;
     box-shadow: 2px 4px 6px #888888;
 }
+@media(max-width: 600px){
+    #box .img img{
+        width:70%;
+    }
+}
+
 
 /* ================= CONTACT ================= */
 
@@ -249,6 +387,16 @@ a {
     grid-gap: 30px;
 }
 
+@media(max-width: 600px){
+    #contact .container{
+        /* display: block; */
+        overflow: hidden;
+        grid-template-columns: auto;
+        grid-area: auto;
+        
+    }
+}
+
 #contact h2 {
     text-align: center;
     padding: 20px;
@@ -256,6 +404,11 @@ a {
     font-family: sans-serif;
     font-size: 25px;
     font-weight: bold;
+}
+@media(max-width: 600px){
+    #contact h2, h3{
+        font-size: 16px;
+    }
 }
 
 #contact h3 {
@@ -267,15 +420,36 @@ a {
     width: auto;
     padding: 10px;
 }
+@media(max-width: 600px){
+    .contactleft{
+        width:20%;
+        padding:5px;
+        
+    }
+}
 
 .contactright {
     width: auto;
+}
+@media(max-width: 600px){
+    .contactright{
+        width:20%;
+    
+    }
 }
 
 .contactright div {
     display: block;
     width: 400px;
     margin: 0 auto;
+}
+@media(max-width: 600px){
+    .contactright div {
+        max-width: 300px;
+    }
+    .contactright div iframe{
+        max-width: 100%;
+    }
 }
 
 /* ================= FOOTER ================= */
